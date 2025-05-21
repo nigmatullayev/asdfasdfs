@@ -25,7 +25,7 @@ class RoleAccessTest(TestCase):
         self.client.login(username='chef', password='pass')
         resp = self.client.get('/api/users/')
         self.assertEqual(resp.status_code, 403)
-        resp = self.client.post('/api/media/serve/', {'recipe_id': 1, 'portions': 1}, content_type='application/json')
+        resp = self.client.post('/api/meals/serve/', {'recipe_id': 1, 'portions': 1}, content_type='application/json')
         self.assertIn(resp.status_code, [200, 201, 400])  # 400 если нет данных
 
     def test_manager_access(self):
@@ -34,5 +34,5 @@ class RoleAccessTest(TestCase):
         self.assertEqual(resp.status_code, 403)
         resp = self.client.get('/api/inventory/notifications/')
         self.assertEqual(resp.status_code, 200)
-        resp = self.client.post('/api/media/serve/', {'recipe_id': 1, 'portions': 1}, content_type='application/json')
+        resp = self.client.post('/api/meals/serve/', {'recipe_id': 1, 'portions': 1}, content_type='application/json')
         self.assertEqual(resp.status_code, 403) 

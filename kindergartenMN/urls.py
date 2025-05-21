@@ -23,7 +23,7 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/media/', include('media.urls')),
+    path('api/meals/', include('meals.urls')),
     path('api/recipes/', include('recipes.urls')),
     path('api/inventory/', include('inventory.urls')),
     path('api/users/', UserListAPIView.as_view(), name='user-list'),

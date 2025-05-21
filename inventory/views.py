@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .models import Product
-from media.models import MealServingLog
+from meals.models import MealServingLog
 from recipes.models import RecipeIngredient
 from django.db.models import Sum
 from datetime import datetime
