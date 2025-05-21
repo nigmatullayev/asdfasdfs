@@ -20,9 +20,9 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
-          cd /home/youruser/myproject  # loyihani turgan joy
-          git pull origin main
-          source venv/bin/activate
+          cd /home/ubuntu/project-for-kindegarden  # loyihani turgan joy
+          git pull origin master
+          source .venv/bin/activate
           pip install -r requirements.txt
           python manage.py migrate
           python manage.py collectstatic --noinput
