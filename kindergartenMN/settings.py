@@ -125,8 +125,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'meals/')
-MEDIA_URL = '/meals/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'meals/')
+# MEDIA_URL = '/meals/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
