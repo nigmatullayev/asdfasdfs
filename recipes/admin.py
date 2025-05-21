@@ -1,6 +1,6 @@
 from .models import Recipe, RecipeIngredient
 from django.contrib import admin
-from meals.views import serve_meal
+from media.views import serve_meal
 from django import forms
 from django.contrib import messages
 import os

@@ -10,7 +10,7 @@ app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
     'generate-monthly-report-every-month': {
-        'task': 'meals.tasks.generate_monthly_report',
+        'task': 'media.tasks.generate_monthly_report',
         'schedule': crontab(minute=0, hour=0, day_of_month=1),
     },
 } 
